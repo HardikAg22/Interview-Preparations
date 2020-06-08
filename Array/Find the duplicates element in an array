@@ -1,0 +1,28 @@
+#include <bits/stdc++.h> 
+using namespace std;
+
+int main()
+{
+		int n;
+		cout<< "Enter Number of elements in an array: ";
+		cin>>n;
+		int arr[n];
+		int i;
+		cout<<"Enter Array elements: ";
+		for(int i=0;i<n;i++)
+		{
+			cin>>arr[i];
+		}
+		cout << "Duplicate Elements: " ;
+		for (i = 0; i <n; i++) 
+			{ 
+			    if (arr[abs(arr[i])] >= 0){
+			    	arr[abs(arr[i])] = -1*arr[abs(arr[i])]; 
+				} 
+			    else
+			    {
+			    	cout << abs(arr[i]) << " "; 	
+				}			    	
+			}		
+	return 0;
+}
